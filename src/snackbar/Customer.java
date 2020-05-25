@@ -1,55 +1,43 @@
+package snackbar;
+
 public class Customer {
-//    Customer
-//
-//    Customer has fields (so knows)
-//
-//    maxId - keep track of last used customer id
-//    id - automatically generated field
-//        name
-//    cash on hand
-//    Customer has methods (so can)
-//
-//    get id
-//    set and get name
-//    add cash to cash on hand
-//    get cash on hand
-//    buy snacks. Given the total cost of the snacks to be purchased, reduce the cash on hand by that amount
+
 
     //initialize variables
     private static int refId = 0;
     private int id;
     private String name;
-    private float cashOnHand;
+    private double cashOnHand;
 
     //constructor function
-    public Customer(String name, float cashOnHand){
-        return this.refId = this.refId + 1;
+    public Customer(String name, double cashOnHand){
+        this.refId = this.refId + 1;
         this.id = this.refId;
         this.name = name;
         this.cashOnHand = cashOnHand;
     }
     //class methods
-    private int getId(){
+    public int getId(){
         return this.id;
     }
 
-    private String getName(){
+    public String getName(){
         return this.name;
     }
 
-    private void setName(String name){
+    public void setName(String name){
         this.name = name;
     }
 
-    private void addCash(float cashToPutOnTopOfYourHand){
+    public void addCash(double cashToPutOnTopOfYourHand){
         this.cashOnHand = this.cashOnHand + cashToPutOnTopOfYourHand;
     }
 
-    private float getCashOnHand(){
+    public double getCashOnHand(){
         return this.cashOnHand;
     }
 
-    private void buySnacks(float costOfSnacks){
+    public void buySnacks(double costOfSnacks){
         this.cashOnHand = this.cashOnHand - costOfSnacks;
     }
 }

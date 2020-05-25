@@ -1,3 +1,5 @@
+package snackbar;
+
 //VendingMachine
 //
 //    Vending machine has fields (so knows)

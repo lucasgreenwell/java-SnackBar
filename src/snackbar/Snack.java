@@ -1,14 +1,7 @@
-package snackBar;
+package snackbar;
 
 
-//Snack has fields (so knows)
-//
-//    maxId - keep track of last used snack id
-//    id - automatically generated field
-//    name
-//    quantity
-//    cost
-//    vending machine id
+
 public class Snack {
     //initialize variables
     //private makes the variable only available within the instance, by its own methods
@@ -17,11 +10,11 @@ public class Snack {
     private int id;
     private String name;
     private int quantity;
-    private float cost;
+    private double cost;
     private int machineId;
 
     //constructor function
-    public Snack(String name, int quantity, float cost, int machineId){
+    public Snack(String name, int quantity, double cost, int machineId){
         this.refId = this.refId + 1;
         this.id = this.refId;
         this.name = name;
@@ -29,17 +22,6 @@ public class Snack {
         this.cost = cost;
         this.machineId = machineId;
     }
-
-//    Snack has methods (so can)
-//
-//    get id
-//    set and get name
-//    set and get cost
-//    set and get vending machine id
-//    get quantity
-//    add quantity when given how many to add
-//    buy snack when given how many to buy
-//    get total cost given a quantity
 
 
     //class methods
@@ -62,7 +44,7 @@ public class Snack {
         this.cost = cost;
     }
 
-    public int getCost(){
+    public double getCost(){
         return cost;
     }
 
@@ -86,7 +68,7 @@ public class Snack {
         this.quantity = this.quantity - snacksGettingBought;
     }
 
-    public int getCost(int numOfSnacks){
+    public double getCost(int numOfSnacks){
         return this.cost * numOfSnacks;
     }
 
